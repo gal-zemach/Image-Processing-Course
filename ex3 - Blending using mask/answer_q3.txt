@@ -1,0 +1,3 @@
+The more levels used in the blending makes for a softer blend as the image is blended on more frequency bands. The more
+levels used the image is also blended in the lower frequencies. If max_levels is bigger than the number of levels
+in the pyramid the result is the same for all max_levels.

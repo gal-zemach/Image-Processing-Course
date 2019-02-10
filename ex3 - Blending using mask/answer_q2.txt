@@ -1,0 +1,5 @@
+Using a bigger filter size for creating the image pyramids makes each level of the pyramids contain lower frequencies.
+Thus blending the 2 pyramids gives more weight to the lower frequencies in the blend.
+Since the first level of the pyramid always contains the highest frequencies, the image will still be blended in the
+highest frequencies but most of the middle frequencies will not be blended.
+This means the emphasis in the blend will be less on the fine details and more in the general color blocks.

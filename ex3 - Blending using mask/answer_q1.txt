@@ -1,0 +1,4 @@
+The ability to multiply each of the Laplacian pyramid's levels allows us to create a band pass filter.
+For example, by choosing the 0 coefficient for L0 we will not allow the highest frequencies in the resulting image and
+by choosing the 0 coefficient for Ln we will not allow the lowest frequencies (and of course we can combine these and
+any other levels).

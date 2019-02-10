@@ -1,0 +1,13 @@
+
+With each addition of residual blocks to the network we increase the network's learning rate. This is most evident in
+the decrease in the 1st epoch's validation loss. The learning rate increase is also evident in the following epochs
+but as the network converges it is not as substantial as in the 1st epoch. We can see this as all graphs
+that represent the same network with a different number of resblocks appear to be (rough) shifts of one another
+in the y axis (so if a graph of 5 resblocks is f(x) the one of 4 resblocks is f(x) + c).
+In addition it does seem that having more depth in the network made the validation loss decrease become more continuous
+and so appear more "natural".
+
+Qualitatively speaking, in the images produced from denoising networks with more depth we can see crisper edges and
+smoother surfaces while those with less depth appear to perform general blurring-like actions on the images.
+In the deblurring networks more depth also returns much crisper edges and less noisy images. The networks with low
+resblock count the blurring angles are very evident in the letters and it's hard to discern between close lines.

@@ -1,0 +1,21 @@
+
+For image super-resolution we will use a similar workflow to the deblurring network we've implemented. The difference
+will be that we will use gaussian blur and in restore_image we will change the images' size.
+I will describe a network that will enlarge by 2 but this can be expanded to any positive power of 2
+(and any size with minor modifications).
+
+training\validation dataset: We will build our datasets using images and their gaussian blur,
+meaning the source batches will contain the images after gaussian blur and the target batches
+will contain the original images.
+
+For the corruption function's implementation, we will first build a dictionary that given a blurred image
+returns the original one. Then we will use it so that every time the corruption function is called on a blurred
+image, it returns the dictionary's value (original unblurred image).
+
+Given an image to enlarge, restore_image will work in the following way:
+1. Train a model on patches of our data using the above corruption function.
+2. Create an adjusted model to fit double the given image's size.
+3. Enlarge the image to double it's size.
+4. Pass the enlarged image to the adjusted model to predict the results.
+
+We should now have a super-resolution image double the size of the new image we got.

@@ -1,0 +1,7 @@
+
+If the center of the gaussian kernel is not placed in the image's (0, 0) the resulting image will be shifted in a
+cyclic manner (meaning it will be shifted and appear to be tiled).
+I found it easier to visualize this as a convolution with a shifted kernel (relying on the convolution theorem).
+In this case every pixel in the resulting image is a weighted average of pixels in a different part of the image (not
+the ones around it). adding this to the fact that a fourier transform on an image works as if the image is infinitely
+tiled explains the above conclusion that the image is both shifted and tiled.
