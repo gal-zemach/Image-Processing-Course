@@ -1,0 +1,4 @@
+
+If one of the initial segment divisions (initial z) will contain no pixels
+the quantization procedure will crash because when computing the q values
+we divide by the number of pixels in the segment so division by zero will occur.
